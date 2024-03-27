@@ -1,0 +1,1 @@
+GET http://localhost:4000/movie/updateRating/2/3.9 HTTP/1.1
