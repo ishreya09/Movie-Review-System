@@ -15,7 +15,7 @@ import com.pes1ug21cs574.movie.Service.MovieService;
 
 @RestController
 @RequestMapping(path = "/movie")
-@CrossOrigin
+@CrossOrigin(origins = "*") 
 public class MovieController {
     @Autowired
     private MovieService movieService;

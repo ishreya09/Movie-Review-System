@@ -39,6 +39,4 @@ public class MovieService {
         existingMovie.setAverageRating(rating);
         return movieRepository.save(existingMovie);
     }
-
-    
 }

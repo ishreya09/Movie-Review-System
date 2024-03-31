@@ -2,8 +2,8 @@ POST http://localhost:4000/movie/add HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Inception",
-    "releaseYear": 2011,
-    "genre": "SciFi",
-    "director": "Cristopher"
+    "title": "Enchanto",
+    "releaseYear": 2021,
+    "genre": "Animation",
+    "director": "Jared"
 }

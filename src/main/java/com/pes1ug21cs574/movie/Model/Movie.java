@@ -79,10 +79,7 @@ public class Movie {
     public int getTotalNumberOfRating() {
         return totalNumberOfRating;
     }
-
     public void setTotalNumberOfRating(int totalNumberOfRating) {
         this.totalNumberOfRating = this.totalNumberOfRating+1;
     }
-
-   
 }

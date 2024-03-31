@@ -16,15 +16,15 @@ import com.pes1ug21cs574.movie.Model.User;
 
 @RestController
 @RequestMapping(path = "/user")
-@CrossOrigin
+@CrossOrigin(origins = "*")     
 public class UserController {
     @Autowired
     private UserService userService;
 
     @PostMapping(path = "/add")
-    public @ResponseBody String addNewUser(@RequestBody User user) {
-        userService.saveUser(user);
-        return "Saved";
+    public @ResponseBody Integer addNewUser(@RequestBody User user) {
+        User u= userService.saveUser(user);
+        return u.getId();
     }
 
     @GetMapping(path = "/all")
@@ -39,12 +39,13 @@ public class UserController {
     }
 
     @PostMapping(path = "/authenticate")
-    public @ResponseBody Boolean authenticateUser(@RequestBody Authentication a) {
+    public @ResponseBody Integer authenticateUser(@RequestBody Authentication a) {
         User u= userService.authenticateUser(a.getEmail(), a.getPassword());
+        System.out.println(u);
         if (u!=null){
-            return true;
+            return u.getId();
         }
-        return false;
+        return -1;
     }
 
     
